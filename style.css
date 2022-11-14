@@ -1,0 +1,194 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: #f9f9f9;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-family: 'Prompt', sans-serif;
+}
+
+main
+{
+    width: 100%;
+    display: flex;
+    padding: 0px 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBx
+{
+    width: 400px;
+    height: 400px;
+    border-radius: 30% 70% 70% 30% / 30% 36% 68% 70% ;
+    background: linear-gradient(315deg, #4CB8C4, #3CD3AD);
+    overflow: hidden;    
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(0, 173, 185, 0.25) 0px 54px 55px, rgba(0, 173, 185, 0.25) 0px -12px 30px, rgba(0, 173, 185, 0.25) 0px 4px 6px, rgba(0, 173, 185, 0.25) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* box-shadow: rgba(20, 181, 245, 0.56) 10px 22px 70px 4px; */
+}
+
+.imgBx img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* transform: scaleX(180deg); */
+    transform: translateY(10px);
+    transform: rotate(-3deg);
+}
+
+/* *************************************************************************************** */
+/* Dark Mode */
+.imgBx.dark
+{
+    background: linear-gradient(135deg, #FF512F, #F09819);
+}
+
+body.dark
+{
+    background: #333;
+}
+
+
+
+/* Dark Mode */
+
+/* The switch - the box around the slider */
+
+.toggle
+{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* *************************************************************** */
+/* Responsivility */
+
+@media(max-width:768px)
+{
+    main
+    {
+        padding: 0 20px;
+    }
+}
+
+@media(max-width:600px)
+{
+    main
+    {
+        padding: 0;
+    }
+}
+
+@media(max-width:432px)
+{
+    .imgBx
+    {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media(max-width:350px)
+{
+    .imgBx
+    {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media(max-width:308px)
+{
+    .imgBx
+    {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media(max-width:260px)
+{
+    .imgBx
+    {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Responsivility */
